@@ -1,0 +1,185 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body{
+    background-color: whitesmoke;
+}
+
+/* Lights switches sections */
+
+#Lights{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 5vh 0;
+}
+
+#Light1{
+    background-color: #05055d;
+    margin: 0 0 5vh 0;
+    border-radius: 10px;
+    width: 60vw;
+    color: white;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    box-sizing: border-box;
+    }
+
+#Light2{
+    background-color: #05055d;
+    margin: 0 0 5vh 0;
+    border-radius: 10px;
+    width: 60vw;
+    color: white;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    box-sizing: border-box;
+}
+
+    .Light_On_Color{
+        background-color: white;
+    }
+
+    .Label{
+        margin: 3vh;
+    }
+
+/* Bulbs */
+
+.Bulb{
+    width: 15vw;
+}
+
+img{
+    margin-top: 2vh;
+}
+
+/* Switches */
+
+label {
+    font-size: 13px;
+    color: #ececec;
+}
+
+.Light-mode-switch{
+    display: inline-block;
+    margin: 3vh 0;
+    position: relative;
+}
+
+.Light-mode-switch > label.Switch-inner{
+    margin: 0px;
+    width: 140px;
+    height: 30px;
+    background: #151515;
+    border-radius: 26px;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.3s ease;
+    display: block;
+}
+
+.Light-mode-switch > label.Switch-inner:before{
+    content: attr(data-on);
+    position: absolute;
+    font-size: 12px;
+    font-weight: 500;
+    top: 7px;
+    right: 20px;
+}
+
+.Light-mode-switch > label.Switch-inner:after{
+    content: attr(data-off);
+    width: 70px;
+    height: 16px;
+    background: #3c3c3c;;
+    border-radius: 26px;
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0px 0px 6px -2px #111;
+    padding: 5px 0px;
+}
+
+.Light-mode-switch input[type="checkbox"]{
+    width: 50px;
+    height: 25px;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    margin: 0px;
+}
+
+.Light-mode-switch input[type="checkbox"]:checked + label.Switch-inner{
+    background: #E0E0E0;
+    color: #151515;
+}
+
+.Light-mode-switch input[type="checkbox"]:checked + label.Switch-inner:after{
+    content: attr(data-on);
+    left: 68px;
+    background: #fff; 
+}
+
+.Light-mode-switch input[type="checkbox"]:checked + label.Switch-inner:before{
+    content: attr(data-off);
+    right: auto;
+    left: 20px;
+}
+
+/* Light Level Bar */
+
+#Light_Level{
+    text-align: center;
+    margin: 5vh 0 0 0 ;
+}
+
+#Light_Level_Text{
+    background-color: white;
+    margin: 0 auto 3vw auto;
+    padding: 2vh 0 5vh 0;
+    border-radius: 10px;
+    width: 60vw;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 10px;
+}
+
+    .Light_Bar_Grey{
+        background-color: #e3e3e3;
+        height: 20px;
+        width: 55vw;
+        margin: 0 auto 2vh auto;
+        border-radius: 50px;
+        box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 10px inset;
+    }
+
+    .Bar{
+        background-color: #fbd24b;
+        height: 20px;
+        margin: 0;
+        border-radius: 50px;
+        z-index: 1;
+        box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 10px;
+    }
+
+        #Low_Bar{
+            width: 25%;
+        }
+
+        #Medium_Bar{
+            width: 50%;
+            box-shadow: rgba(255, 196, 0, 0.5) 0px 0px 5px;
+        }
+
+        #High_Bar{
+            width: 75%;
+            box-shadow: rgba(255, 196, 0, 0.5) 0px 0px 10px;
+        }
